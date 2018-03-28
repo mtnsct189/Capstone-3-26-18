@@ -1,7 +1,7 @@
-##Capstone: 
-#*Project Zarathrustra*
+## Capstone: 
+# *Project Zarathrustra*
 
-##Overview:
+## Overview:
         An attempt to make self-mastery more enjoyable and simplify 
     people's life goals into managable chunks.
     
@@ -9,7 +9,7 @@
     -When tasks are complete there will be a save and update with progess towards goal or level.
     -Characters and classes will be relatable to the users personal views.
     
-##Functionality
+## Functionality
        The user will first sign up, and design there character class by answering question's around
     and hypothetical situations.
     
@@ -17,8 +17,8 @@
     -A reward and progress system to keep the user on the path.
     -Data will be stored and updated at the addition/completion of the event.
     
-##Schedule
-   ###*OP Zarathrustra Timeline*
+## Schedule
+   ### *OP Zarathrustra Timeline*
     3/26 Start OP Z
     3/31 Opening and sign up/ log in complete.
     4/1 Classes should be added, with questions to assign classes.

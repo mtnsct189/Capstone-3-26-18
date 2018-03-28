@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Sign up</h2>
+  <form method="post">
+    {% csrf_token %}
+    {% for field in form %}
+      <p>
+        {{ field.label_tag }}<br>
+        {{ field }}
+        {% if field.help_text %}
+          <small style="color: grey" id="{{ field.label_tag }}"></small>
+        {% endif %}
+        {% for error in field.errors %}
+          <p style="color: red">{{ error }}</p>
+        {% endfor %}
+      </p>
+    {% endfor %}
+    <button type="submit">Sign up</button>
+  </form>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+  let s = '';
+  let htmlObject = '';
+  {% for field in form %}
+        s = '{{ field.help_text }}';
+        htmlObject = s;
+        document.querySelector(#{{ field.label_tag }}).appendChild(htmlObject);
+  {% endfor %}
+</script>
+{% endblock %}
