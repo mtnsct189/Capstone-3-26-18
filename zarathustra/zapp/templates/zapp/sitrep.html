@@ -7,14 +7,20 @@
 </head>
 <body>
 <h1>Welcome, {{user.username}}!</h1>
-<h2>Here is your SITREP for today</h2>
-{% for list_dict in todo_listing %}
-<h3>{{ list_dict.list_object.title }}</h3>
-<ul>
-    <li>Number of items: {{ list_dict.item_count }}</li>
-    <li>Number completed: {{ list_dict.items_complete }} ({{ list_dict.percent_complete }}%)</li>
-</ul>
-{% endfor %}
+<div class="content container">
+    <div class="row">
+        <div class="col-sm-8">
+            <h2>Here is your SITREP for today</h2>
+            {% for list_dict in todo_listing %}
+            <h3>{{ list_dict.list_object.title }}</h3>
+            <ul>
+                <li>Number of items: {{ list_dict.item_count }}</li>
+                <li>Number completed: {{ list_dict.items_complete }} ({{ list_dict.percent_complete }}%)</li>
+            </ul>
+            {% endfor %}
+        </div>
+    </div>
+</div>
 </body>
 </html>
 

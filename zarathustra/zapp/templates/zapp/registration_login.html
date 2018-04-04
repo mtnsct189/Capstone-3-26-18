@@ -1,30 +1,42 @@
-{% load static %}
-<img src="{% static 'zapp/zarathustra.jpg' %}" alt="My image"/>
+<head>
+    {% load static %}
+    <img src="{% static 'zapp/zarathustra.jpg' %}" alt="Zarathustra"/>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+</head>
 {% if message %}
 <span style="background-color:#54c7c2;color:#ff6b9d;font-size:40px">{{message}}</span>
 {% endif %}
 
 
-
-
-<h2>Login</h2>
-<form action="{% url 'zapp:login' %}?next={{next}}" method="post">
-    {% csrf_token %}
-    <input type="text" name="username" placeholder="user name"/>
-    <input type="password" name="password" placeholder="password"/>
-    <button type="submit">login</button>
-</form>
-
-
-<h2>Register</h2>
-<form id="myform" action="{% url 'zapp:register' %}" method="post">
-    {% csrf_token %}
-    <input type="text" name="username" placeholder="username"/>
-    <input type="text" name="email" placeholder="email"/>
-    <input id="password_input1" type="password" name="password" placeholder="password"/>
-    <input id="password_input2" type="password" placeholder="re-type password"/>
-    <button type="submit" id="register_bt">register</button>
-</form>
+<div class="content container">
+    <div class="row">
+        <div class="col-md-8">
+            <h2>Login</h2>
+            <form action="{% url 'zapp:login' %}?next={{next}}" method="post">
+                {% csrf_token %}
+                <input type="text" name="username" placeholder="user name"/>
+                <input type="password" name="password" placeholder="password"/>
+                <button type="submit">login</button>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="content container">
+    <div class="row">
+        <div class="col-md-10">
+            <h2>Register</h2>
+            <form id="myform" action="{% url 'zapp:register' %}" method="post">
+                {% csrf_token %}
+                <input type="text" name="username" placeholder="username"/>
+                <input type="text" name="email" placeholder="email"/>
+                <input id="password_input1" type="password" name="password" placeholder="password"/>
+                <input id="password_input2" type="password" placeholder="re-type password"/>
+                <button type="submit" id="register_bt">register</button>
+            </form>
+        </div>
+    </div>
+</div>
 
 
 <script>
@@ -32,7 +44,7 @@
     var register_bt = document.querySelector('#register_bt');
     var password_input1 = document.querySelector('#password_input1');
     var password_input2 = document.querySelector('#password_input2');
-    register_bt.onclick = function() {
+    register_bt.onclick = function () {
         if (password_input1.value !== password_input2.value) {
             alert('Your passwords don\'t match!');
             return false;
