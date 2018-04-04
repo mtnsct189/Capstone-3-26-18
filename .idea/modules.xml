@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../20180116-FullStack-Day/.idea/20180116-FullStack-Day.iml" filepath="$PROJECT_DIR$/../20180116-FullStack-Day/.idea/20180116-FullStack-Day.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Capstone-3-26-18.iml" filepath="$PROJECT_DIR$/.idea/Capstone-3-26-18.iml" />
     </modules>
   </component>
