@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8"/>
+    <title>SITREP</title>
+
+</head>
+<body>
+<h1>Welcome, {{user.username}}!</h1>
+<h2>Here is your SITREP for today</h2>
+{% for list_dict in todo_listing %}
+<h3>{{ list_dict.list_object.title }}</h3>
+<ul>
+    <li>Number of items: {{ list_dict.item_count }}</li>
+    <li>Number completed: {{ list_dict.items_complete }} ({{ list_dict.percent_complete }}%)</li>
+</ul>
+{% endfor %}
+</body>
+</html>
+
+<a href="{% url 'zapp:logout' %}">log out</a>
+
